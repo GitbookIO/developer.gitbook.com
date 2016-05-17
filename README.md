@@ -3,12 +3,11 @@
 The different GitBook API clients let you easily communicate with the GitBook API ([https://www.gitbook.com](https://www.gitbook.com)) using Node or GoLang.
 
 
-
-## Install {#install}
+{% method -%}
+## Install
 
 The first thing is to get the GitBook API client.
 
-{% example name="install" -%}
 {% sample lang="js" -%}
 ```bash
 $ npm install gitbook-api
@@ -18,15 +17,14 @@ $ npm install gitbook-api
 ```bash
 $ go get github.com/GitbookIO/go-gitbook-api
 ```
-{% endexample %}
+{% endmethod %}
 
 
-
-## Load {#load}
+{% method -%}
+## Load
 
 Include the library.
 
-{% example name="load" -%}
 {% sample lang="js" -%}
 ```js
 var Gitbook = require('gitbook-api');
@@ -38,13 +36,14 @@ package main
 
 import "github.com/GitbookIO/go-gitbook-api"
 ```
-{% endexample %}
+{% endmethod %}
 
 
 
 ## Examples
 
-### Create a client {#create-client}
+{% method -%}
+### Create a client
 
 To create a client, you can provide many options.
 
@@ -54,13 +53,14 @@ To authenticate, you can either use your GitBook's username/password combination
 
 The clients are compatible with GitBook Enterprise by providing a different host for the API endpoint.
 
-{% example name="create-client" -%}
+{% common -%}
 Create a client with default options.
 
 {% sample lang="js" -%}
 ```js
 var client = new Gitbook();
 ```
+
 {% sample lang="go" -%}
 ```go
 api := gitbook.NewAPI(gitbook.APIOptions{})
@@ -119,12 +119,12 @@ api := gitbook.NewAPI(gitbook.APIOptions{
     Host: "http://gitbook.mycompany.com",
 })
 ```
-{% endexample %}
+{% endmethod %}
 
 
-### List books {#list-books}
+{% method -%}
+### List books
 
-{% example name="list-books" -%}
 {% common -%}
 List books from the authenticated user:
 
@@ -151,12 +151,12 @@ books, err := api.Books.List()
 fmt.Printf("books = %q\n", books)
 fmt.Printf("error = %q\n", err)
 ```
-{% endexample %}
+{% endmethod %}
 
 
-### Get a specific book {#get-book}
+{% method -%}
+### Get a specific book
 
-{% example name="get-book" -%}
 {% sample lang="js" -%}
 ```js
 var book = client.book("GitBookIO/javascript");
@@ -168,12 +168,12 @@ book.details().then(function(infos) { ... });
 // Get book
 book, err := api.Book.Get("GitBookIO/javascript")
 ```
-{% endexample %}
+{% endmethod %}
 
 
-### Get details about an author {#get-author}
+{% method -%}
+### Get details about an author
 
-{% example name="get-author" -%}
 {% sample lang="js" -%}
 ```js
 var author = client.author("GitBookIO");
@@ -185,4 +185,4 @@ author.then(function(infos) { ... });
 // Get author
 author, err := api.Author.Get("GitBookIO")
 ```
-{% endexample %}
+{% endmethod %}
