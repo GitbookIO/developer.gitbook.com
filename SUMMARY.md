@@ -1,9 +1,16 @@
 # Summary
 
-* [Overview](README.md)
+## Overview
+
+* [GitBook API Clients](README.md)
 * [Install](README.md#install)
-* [Load](README.md#load)
 * [Create a client](README.md#create-client)
-* [List books](README.md#list-books)
-* [Get a specific book](README.md#get-book)
-* [Get details about an author](README.md#get-author)
+
+## Books
+
+* [List books](books.md#list)
+* [Get a specific book](books.md#get)
+
+## Authors
+
+* [Get details about an author](authors.md#get)

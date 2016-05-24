@@ -1,3 +1,19 @@
 {
-    "plugins": ["search", "theme-api", "-sharing"]
+    "plugins": ["search", "theme-api", "-sharing"],
+    "pluginsConfig": {
+        "theme-api": {
+            "languages": [
+                {
+                    "lang": "js",
+                    "name": "JavaScript",
+                    "default": true
+                },
+                {
+                    "lang": "go",
+                    "name": "Go"
+                }
+            ],
+            "split": true
+        }
+    }
 }
