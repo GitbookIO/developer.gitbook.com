@@ -1,16 +1,23 @@
 # Summary
 
-## Overview
+### Overview
 
-* [GitBook API Clients](README.md)
-* [Install](README.md#install)
-* [Create a client](README.md#create-client)
+- [Introduction](README.md)
+- [OAuth](overview/oauth.md)
 
-## Books
+### Books
 
-* [List books](books.md#list)
-* [Get a specific book](books.md#get)
+- [Overview](books/README.md)
+- [Traffic](books/traffic.md)
+- [Access Keys](books/keys.md)
+- [Versions](books/versions.md)
+- [Content](books/content.md)
 
-## Authors
+### Authors
 
-* [Get details about an author](authors.md#get)
+- [Overview](authors/README.md)
+
+### Miscellaneous
+
+- [Search](search/README.md)
+- [Topics](topics/README.md)
