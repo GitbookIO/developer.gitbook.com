@@ -24,7 +24,7 @@ GET https://api.gitbook.com/oauth/authorize
 | --------- | ---- | ----------- |
 | `client_id` | `string` | **Required**. The client ID you received from GitBook when you registered. |
 | `redirect_uri` | `string` | **Required**. The URL in your application where users will be sent after authorization. |
-| `response_type` | `string` | Type of response expected, currently only valid value is `code` |
+| `response_type` | `string` | **Required**. Type of response expected, currently only valid value is `code` |
 
 {% endmethod %}
 
