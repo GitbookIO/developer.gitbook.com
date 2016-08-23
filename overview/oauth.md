@@ -17,7 +17,7 @@ The first step is to redirect the user to the authorization dialog, this dialog 
 
 {% sample lang="http" %}
 ```
-GET https://github.com/login/oauth/authorize
+GET https://api.gitbook.com/oauth/authorize
 ```
 
 | Parameter | Type | Description |
