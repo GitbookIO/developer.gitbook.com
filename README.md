@@ -39,6 +39,29 @@ const GitBook = require('gitbook-api');
 
 const client = new GitBook();
 ```
+
+{% sample lang="go" %}
+Install the GitBook API client using `go get`:
+
+```bash
+$ go get github.com/GitbookIO/go-gitbook-api
+```
+
+Initialize a client:
+
+```go
+package main
+
+import (
+    "fmt"
+    "github.com/GitbookIO/go-gitbook-api"
+)
+
+func main() {
+    api := gitbook.NewAPI(gitbook.APIOptions{})
+}
+```
+
 {% endmethod %}
 
 {% method %}
@@ -96,6 +119,25 @@ const client = new GitBook({
 });
 ```
 
+{% sample lang="go" %}
+
+##### Via Username and Password
+
+```go
+api := gitbook.NewAPI(gitbook.APIOptions{
+    Username: "username",
+    Password: "password",
+})
+```
+
+##### Via OAuth Tokens
+
+```go
+api := gitbook.NewAPI(gitbook.APIOptions{
+    Token: "token"
+})
+```
+
 {% endmethod %}
 
 
@@ -141,6 +183,15 @@ client.books()
 ```
 
 The status code can be access using the `code` property of the error: `err.code`.
+
+{% sample lang="go" %}
+
+All API calls return both the result and the error:
+
+```go
+book, err := api.Book.Get("gitbookio/javascript")
+```
+
 {% endmethod %}
 
 {% method %}
@@ -203,6 +254,12 @@ $ curl https://gitbook/myenterprise.com/api/books/all
 const client = new GitBook({
     host: 'http://gitbook.mycompany.com'
 });
+```
+{% sample lang="go" %}
+```go
+api := gitbook.NewAPI(gitbook.APIOptions{
+    Host: "http://gitbook.mycompany.com/api/"
+})
 ```
 {% endmethod %}
 
