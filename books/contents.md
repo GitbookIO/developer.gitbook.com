@@ -23,12 +23,34 @@ GET /book/:author/:book/contents/:file
 | `file` | string | **Required:** Path of the file to retrieve (with .json extension) |
 {% endmethod %}
 
+{% method %}
+## Get contents for a specific version {#get-version}
+
+The Contents API can also serve other versions than the main one.
+
+It can be used to retrieve contents for a specific Git tag, branch or commit.
+
+See the [Versions API](./versions.md) for details on how to list versions.
+
+{% sample lang="http" %}
+```
+GET /book/:author/:book/contents/v/:version/:file
+```
+
+##### Parameters
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| `version` | string | **Required:** SHA, Branch name or Tag |
+| `file` | string | **Required:** Path of the file to retrieve (with .json extension) |
+{% endmethod %}
+
 ## File format {#format}
 
 The GitBook Contents API serve content of `JSON` build from the GitBook Toolchain. The format may vary between GitBook version being used to generate your book.
 
 {% method %}
-### Version 2
+#### Version 2
 
 Currently the default version, but soon to be deprecated.
 
@@ -52,7 +74,7 @@ Currently the default version, but soon to be deprecated.
 {% endmethod %}
 
 {% method %}
-### Version 3
+#### Version 3
 
 This format is generated since GitBook `>=3.0.0`. It is a modern and easier format to work with.
 
