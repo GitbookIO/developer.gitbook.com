@@ -126,6 +126,21 @@ Not all errors map cleanly onto HTTP response codes, however.
     "code": 400
 }
 ```
+
+{% sample lang="js" %}
+
+All API calls return promises.
+
+```js
+client.books()
+.then(function(result) {
+
+}, function(err) {
+
+});
+```
+
+The status code can be access using the `code` property of the error: `err.code`.
 {% endmethod %}
 
 {% method %}
@@ -146,12 +161,42 @@ Paginated results will be returned with information about the page context.
     total: 0
 }
 ```
+{% sample lang="js" %}
+Paginated methods return a `Page` object.
+
+Calling `page.next()` or `page.prev()` will fetch the next/previous page and return a promise with a new `Page` object.
+
+`page.list: Array<Mixed>` contains the items of current page.
+
+`page.total: Number` is count of all elements.
+
+```js
+client.books()
+.then(function(page) {
+    console.log('Total:', page.total);
+    console.log('In this page:', page.list.length);
+
+    // Fetch next page
+    return page.next();
+}, function(err) {
+    // Error occured
+});
+```
+
 {% endmethod %}
 
 {% method %}
 ### Enterprise
 
 All API endpoints are prefixed with the following URL: `http(s)://hostname/api/`.
+
+Most methods require an authentication when using an enterprise instance.
+
+{% sample lang="http" %}
+
+```bash
+$ curl https://gitbook/myenterprise.com/api/books/all
+```
 
 {% sample lang="js" %}
 ```js

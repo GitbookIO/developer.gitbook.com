@@ -12,6 +12,7 @@
 - [Access Keys](books/keys.md)
 - [Versions](books/versions.md)
 - [Contents](books/contents.md)
+- [Discussions](books/discussions.md)
 
 ### Authors
 
