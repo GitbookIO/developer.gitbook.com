@@ -25,6 +25,20 @@ Via: 1.1 vegur
 { ... }
 ```
 
+{% sample lang="js" %}
+Install the GitBook API client from NPM:
+
+```bash
+$ npm install gitbook-api
+```
+
+Initialize a client:
+
+```js
+const GitBook = require('gitbook-api');
+
+const client = new GitBook();
+```
 {% endmethod %}
 
 {% method %}
@@ -61,6 +75,25 @@ The access token allows you to make requests to the API on a behalf of a user.
 
 ```bash
 $ curl -H "Authorization: token OAUTH-TOKEN" https://api.gitbook.com/account
+```
+
+{% sample lang="js" %}
+
+##### Via Username and Password
+
+```js
+const client = new GitBook({
+    username: 'MyUsername',
+    token: 'password'
+});
+```
+
+##### Via OAuth Tokens
+
+```js
+const client = new GitBook({
+    token: 'oauth token'
+});
 ```
 
 {% endmethod %}
@@ -115,9 +148,18 @@ Paginated results will be returned with information about the page context.
 ```
 {% endmethod %}
 
+{% method %}
 ### Enterprise
 
 All API endpoints are prefixed with the following URL: `http(s)://hostname/api/`.
+
+{% sample lang="js" %}
+```js
+const client = new GitBook({
+    host: 'http://gitbook.mycompany.com'
+});
+```
+{% endmethod %}
 
 ### Help and Support
 
