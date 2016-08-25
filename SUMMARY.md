@@ -21,5 +21,5 @@
 
 ### Miscellaneous
 
-- [Search](search/README.md)
-- [Topics](topics/README.md)
+- [Search](misc/search.md)
+- [Topics](misc/topics.md)
