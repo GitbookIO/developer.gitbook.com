@@ -13,6 +13,7 @@
 - [Versions](books/versions.md)
 - [Contents](books/contents.md)
 - [Discussions](books/discussions.md)
+- [Webhooks](books/hooks.md)
 
 ### Authors
 
