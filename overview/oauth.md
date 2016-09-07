@@ -2,7 +2,7 @@
 
 OAuth2 is a protocol that lets external applications request authorization to private details in a user's GitBook account without getting their password. This is preferred over Basic Authentication because tokens can be limited to specific types of data, and can be revoked by users at any time.
 
-All developers need to [register their application](https://www.gitbook.com/@samypesse/settings/developers) before getting started. A registered OAuth application is assigned a unique Client ID and Client Secret. The Client Secret should not be shared.
+All developers need to [register their application](https://www.gitbook.com/settings/developers) before getting started. A registered OAuth application is assigned a unique Client ID and Client Secret. The Client Secret should not be shared.
 
 You may create a personal access token for your own use or implement the web flow below to allow other users to authorize your application.
 
